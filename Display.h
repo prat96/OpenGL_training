@@ -1,8 +1,10 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#include <SDL/SDL.h>
+#include <iostream>
 #include <string>
+#include <SDL/SDL.h>
+#include <GL/glew.h>
 
 class Display
 {
