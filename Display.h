@@ -1,6 +1,7 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
+#include <SDL/SDL.h>
 #include <string>
 
 class Display
@@ -15,6 +16,8 @@ protected:
 private:
 	Display(const Display& other) {}
 	Display& operator=(const Display& other) {}
+	
+	SDL_Window* m_window;
 };
 
 #endif //DISPLAY_H

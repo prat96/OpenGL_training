@@ -1,7 +1,8 @@
 #include <iostream>
+#include "Display.h"
 
 int main(int argc, char** argv) 
 {
-	std::cout << "Hello World!" << std::endl;
+	Display Display(800, 600, "Hello World!");
 	return 0;
 }
