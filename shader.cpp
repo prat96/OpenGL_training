@@ -28,6 +28,12 @@ shader::~shader()
     glDeleteProgram(m_program);
 }
 
+void shader::Bind()
+{
+    glUseProgram(m_program);
+}
+
+
 std::string shader::LoadShader(const std::string& filename)
 {
 	std::ifstream file;
@@ -48,7 +54,6 @@ std::string shader::LoadShader(const std::string& filename)
     {
         std::cerr << "Unable to load shader: " << filename << std::endl;
     }
-
     return output;
 }
 
@@ -89,6 +94,5 @@ GLuint shader::CreateShader(const std::string& text, unsigned int type)
     glCompileShader(shader);
 
     CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error compiling shader!");
-
     return shader;
 }
