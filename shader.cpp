@@ -5,7 +5,6 @@
 shader::shader(const std::string& filename)
 {
     m_program = glCreateProgram();
-    m_program = glCreateProgram();
     m_shaders[0] = CreateShader(LoadShader(filename + ".vs"), GL_VERTEX_SHADER);
     m_shaders[1] = CreateShader(LoadShader(filename + ".fs"), GL_FRAGMENT_SHADER);
 
