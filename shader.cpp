@@ -35,3 +35,24 @@ std::string shader::LoadShader(const std::string& filename)
 
     return output;
 }
+
+void shader::CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const std::string& errorMessage)
+{
+    GLint success = 0;
+    GLchar error[1024] = { 0 };
+
+    if (isProgram)
+        glGetProgramiv(shader, flag, &success);
+    else
+        glGetShaderiv(shader, flag, &success);
+
+    if (success == GL_FALSE)
+    {
+        if (isProgram)
+            glGetProgramInfoLog(shader, sizeof(error), NULL, error);
+        else
+            glGetShaderInfoLog(shader, sizeof(error), NULL, error);
+
+        std::cerr << errorMessage << ": '" << error << "'" << std::endl;
+    }
+}
