@@ -1,2 +1,5 @@
-﻿  shader.cpp
+﻿  main.cpp
+  shader.cpp
+C:\Users\prath\Documents\Visual Studio 2019\Projects\OpenGL\OpenGLProject1\shader.cpp(90,31): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+  Generating Code...
   OpenGLProject1.vcxproj -> C:\Users\prath\Documents\Visual Studio 2019\Projects\OpenGL\OpenGLProject1\x64\Debug\OpenGLProject1.exe

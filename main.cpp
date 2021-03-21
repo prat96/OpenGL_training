@@ -12,6 +12,5 @@ int main(int argc, char** argv)
 
 		display.Update();
 	}
-
 	return 0;
 }
